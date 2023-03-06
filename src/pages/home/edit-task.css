@@ -1,0 +1,165 @@
+
+.Editing
+{
+  justify-content:flex-start;
+  margin-top: 50px;
+  height: auto;
+}
+.one{
+  align-items:flex-start !important;
+  position: relative;
+}
+.one .fa-edit
+{
+  font-size: 25px;
+}
+.one .title
+{
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+}
+.one .title:focus
+{
+  outline: none;
+}
+.one label
+{
+  cursor: pointer;
+  position: absolute;
+  top: -7px;
+  right: 0;
+  
+}
+.one label:hover
+{
+  scale: .95;
+}
+.two{
+  flex-direction: column;
+  max-width: 85%;
+  width: 900px;
+}
+.two .created{
+  justify-content: space-between;
+  width: 85%;
+}
+.two .created .completed
+{
+  justify-content: space-between;
+  
+}
+.two .created .completed input 
+{
+  width: 15px;
+  height: 15px;
+  accent-color: teal;
+
+
+
+}
+.two .created .completed p
+{
+  font-size: 15px;
+  padding-top: 5px;
+  margin-left: 8px;
+}
+.two .created .para , .two .created time
+{
+  font-size: 10px;
+  color: rgb(164, 213, 255);
+
+}
+.two .container{
+  width: 90%;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #444;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+ .two .container:hover{
+  border-left: 6px solid whitesmoke;
+  transition: all 0.2s;
+}
+.Light .two .container:hover{
+  border-left: 6px solid teal;
+  transition: all 0.2s;
+}
+.two .container p{
+  font-size: 15px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.two .container .fa-trash:hover{
+  cursor: pointer;
+  scale: .95;
+}
+.parent-container
+{
+  width: 100%;
+  flex-direction: column;
+}
+
+.three button
+{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 130px;
+  cursor: pointer;
+}
+.three button:active
+{
+  scale: .95;
+}
+.three .add-task
+{
+  background-color:rgba(31, 198, 198, 0.519) ;
+  font-size: 12px !important;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.three .add-task .fa-plus
+{
+  font-size: 11px !important;
+  font-weight: 900;
+}
+ .delete-task
+{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  width: 130px;
+  cursor: pointer;
+  background-color: rgba(228, 43, 11, 0.792);
+  font-size: 12px !important;
+  font-weight: 700;
+
+}
+.add-more-task{
+  animation: modal 0.5s 1;
+}
+.ml{margin-left: 15px;}
+.add-more-task form{width: 100%;text-align: left ;}
+.input-width{width: 50%;}
+.Light .created p , .Light .one .fa-edit , .Light .one #edit-title
+{
+  color:teal;
+}
+
+
+.Light .one .title
+{
+  caret-color: #777; 
+  color: #444;
+}
+.Light .two .container p
+{
+  color:white;
+}
+.line{text-decoration: line-through wavy red 3.5px ;}
+
+

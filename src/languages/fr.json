@@ -1,0 +1,40 @@
+{
+  "lang": "français",
+  "signout": "se déconnecter",
+  "support": "entre d'aidec",
+  "account": "Le profil",
+  "order_first" : "récente",
+  "order_last" : "vieux" ,
+  "allTasks": "Toutes les tâches" , 
+  "task_comp" : "Complété",
+  "task_not_comp" : "pas complété",
+  "title" : "le titre",
+  "addbtn": "ajouter une nouvelle tâche",
+  "add" : "ajouter",
+  "submit":"D'accord",
+  "welcome":"Accueillir",
+  "verifying_message":"Veuillez vérifier votre compte pour continuer",
+  "send_email":"envoie-moi",
+  "completed_tasks":"Aucune tâche n'a encore été terminée",
+  "congrats":"Félicitations! vous avez terminé toutes les tâches",
+  "please":"s'il te plaît",
+  "to-continue":"continuer",
+  "signup":"s'inscrire",
+  "have-account":"s'identifier",
+  "no_account":"Je n'ai pas de compte",
+  "forgot_pass":"Mot de passe oublié",
+  "taskat":"taskaté",
+  "designed_by":"Conçu et développé par",
+  "omar":"Omaré Fathyé",
+  "delete":"barrer",
+  "done":"fini",
+  "delete-task":"supprimerTâche",
+  "delete-tasks":"supprimer toutes les tâches",
+  "add_task":"Ajouter une tâche"
+
+
+
+
+
+
+}

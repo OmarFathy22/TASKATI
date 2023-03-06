@@ -1,0 +1,44 @@
+
+header{
+  flex-direction: column;
+  height: 180px;
+}
+header a , button
+{
+  font-size: 15px;
+}
+.main-link {
+  padding: 4px 10px;
+}
+h1 a{
+  font-size: 30px;
+}
+main h1{
+  font-size: 20px;
+}
+.Data h1 span{
+ font-size: 16px;
+ color: rgb(7, 215, 252);
+ padding: 0px 0px;
+ display: inline;
+}
+.Data h2{
+  font-size: 10px;
+  padding: 0px 0px;
+  display: inline;
+}
+.delete{
+  margin: 0 auto;
+}
+.forgot-password
+{
+  height: 430px !important;
+  /* width: 80%; */
+}
+.main-list {
+  font-size: 15px !important;
+}
+.lang 
+{
+  margin-top: 9px;
+}

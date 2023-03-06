@@ -1,0 +1,40 @@
+{
+  "lang": "English",
+  "signout": "Sign-out",
+  "support": "Support",
+  "account": "Profile",
+  "order_first" : "recent",
+  "order_last" : "earlier" ,
+  "allTasks": "All Tasks" , 
+  "task_comp" : "Completed",
+  "task_not_comp" : "Not Completed",
+  "title" : "Title",
+  "addbtn": "Add New Task",
+  "add" : "add",
+  "submit":"OK",
+  "welcome":"Welcome",
+  "verifying_message":"Please verify your email to continue",
+  "send_email":"send me",
+  "completed_tasks":"No task have been completed yet",
+  "congrats":"Congratulatoins! you have completed all tasks",
+  "please":"please",
+  "to-continue":"to continue",
+  "signup":"sign up",
+  "have-account":"sign in",
+  "no_account":"Don't hava an account",
+  "forgot_pass":"Forgot password",
+  "taskat":"TASKATI",
+  "designed_by":"Designed and developed by",
+  "omar":"OMAR FATHY",
+  "delete":"delete",
+  "done":"done",
+  "delete-task":"Delete Task",
+  "delete-tasks":"Delete All Tasks",
+  "add_task":"Add Task",
+  "welcome-to":"Welcome to TASKATI"
+
+
+
+
+
+}

@@ -1,0 +1,38 @@
+{
+  "lang": "العربية",
+  "signout": "تسجيل الخروج",
+  "support": "المساعدة",
+  "account": "حسابك",
+  "order_first" : "الاحدث",
+  "order_last" : "الأقدم" ,
+  "allTasks": "جميع المهام" , 
+  "task_comp" : "مكتملة",
+  "task_not_comp" : "غير مكتملة",
+  "title": "العنوان",
+  "addbtn":"أضف مهمة جديدة",
+  "add" : "أضف",
+  "submit":"تم",
+  "welcome":"مرحبا",
+  "verifying_message":"من فضلك أكد حسابك للمتابعة",
+  "send_email":"أرسل لى",
+  "completed_tasks":"لا يوجد مهام تم إكمالها حتى الآن",
+  "congrats":"تهانيا! لقد انتهيت من جميع مهامك",
+  "please":"من فضلك قم ب",
+  "to-continue":"للمتابعة",
+  "signup":"تسجيل الدخول",
+  "have-account":"لدي حساب",
+  "no_account":"ليس لدي حساب",
+  "forgot_pass":"نسيت كلمه المرور",
+  "taskat":" تاسكاتي",
+  "designed_by":"قام بالتصميم والتطوير",
+  "omar":"عمر فتحي",
+  "delete":"حذف",
+  "done":"تم",
+  "add_task":"إضافة مهمة",
+  "delete-task":"حذف المهمة",
+  "delete-tasks":"حذف جميع المهام",
+  "welcome-to":"مرحبا بك فى تاسكاتي"
+
+
+  
+}
