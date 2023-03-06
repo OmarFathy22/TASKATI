@@ -30,7 +30,10 @@
   "done":"fini",
   "delete-task":"supprimerTâche",
   "delete-tasks":"supprimer toutes les tâches",
-  "add_task":"Ajouter une tâche"
+  "add_task":"Ajouter une tâche",
+  "areyousure":"êtes-vous sûr de vouloir supprimer toutes les tâches ?",
+  "Yes":"Oui",
+  "No":"Non"
 
 
 

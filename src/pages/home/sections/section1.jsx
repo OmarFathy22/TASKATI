@@ -6,13 +6,7 @@ import { db } from "../../../firebase/config";
 function Section1({user , Id ,changeTitle }) {
 const [value, loading, error] = useDocument(doc(db, user.uid, Id));
 const input_element = useRef(null);
-const [addline, setaddline] = useState("");
   useEffect(() => {
-   if(value)
-   {
-    if(value.data().completed)setaddline("line")
-   else setaddline("")
-   }
   }, [value]);
   if(error) return <h1>{error.message}</h1>
   if(loading) return <Loading/>
@@ -27,7 +21,7 @@ const [addline, setaddline] = useState("");
          changeTitle(eo); 
         }
        }
-      type="text" id = 'edit-title' placeholder="add title" defaultValue={value.data().title} className = {"title " + (addline) } />
+      type="text" id = 'edit-title' placeholder="add title" defaultValue={value.data().title} className = {"title " } />
       <label
         onClick={
           () => {

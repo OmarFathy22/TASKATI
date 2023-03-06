@@ -31,7 +31,10 @@
   "delete-task":"Delete Task",
   "delete-tasks":"Delete All Tasks",
   "add_task":"Add Task",
-  "welcome-to":"Welcome to TASKATI"
+  "welcome-to":"Welcome to TASKATI",
+  "areyousure":"Are you sure you wnat to delete all tasks ?",
+  "Yes":"YES",
+  "No":"NO"
 
 
 

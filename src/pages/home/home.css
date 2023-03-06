@@ -62,20 +62,24 @@
 
 }
 
+
 .home .all-tasks .one-task {
-  border: 2px solid antiquewhite;
+  border-bottom: 1px solid teal;
+  border-left: 1px solid teal;
+  --tw-shadow: 0px 1px 3px #0000003d,0px 2px 8px #15c0e229;
+    --tw-shadow-colored: 0px 1px 3px var(--tw-shadow-color),0px 2px 8px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
   margin: 40px 20px;
   min-width: 300px;
   height: 180px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.2s;
   position: relative;
-
 }
 
 
 .home .all-tasks .one-task:hover {
-  border-left: 8px solid antiquewhite;
+  scale: 0.97;
 }
 
 .home .all-tasks .one-task h2 {
@@ -133,12 +137,10 @@
 /* light mode  */
 .Light .all-tasks .one-task {
   background-color: #444;
-  border: 1px solid white;
 
 }
 
  .Light .home .all-tasks .one-task:hover {
-  border: 1px solid teal;
   border-left: 8px solid teal;
 }
 
@@ -216,4 +218,9 @@ p i.fa-solid .fa-heart
   bottom: 0;
   right: 0;
 
+ }
+ .completed-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
  }
