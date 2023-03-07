@@ -34,7 +34,11 @@
   "welcome-to":"مرحبا بك فى تاسكاتي",
   "areyousure":"هل أنت متأكد أنك تريد حذف جميع المهام؟",
   "Yes":"نعم",
-  "No":"لا"
+  "No":"لا",
+  "Complete Task":"تم",
+  "Delete Task":"حذف",
+  "Edit Task":"تعديل",
+  "start working":"ابدأ"
 
 
   

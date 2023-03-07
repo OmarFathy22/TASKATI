@@ -33,7 +33,11 @@
   "add_task":"Ajouter une tâche",
   "areyousure":"êtes-vous sûr de vouloir supprimer toutes les tâches ?",
   "Yes":"Oui",
-  "No":"Non"
+  "No":"Non",
+  "Complete Task":"fini",
+  "Delete Task":"barrer",
+  "Edit Task":"modifier",
+  "start working":"commencer"
 
 
 

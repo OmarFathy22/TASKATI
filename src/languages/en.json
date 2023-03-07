@@ -34,7 +34,11 @@
   "welcome-to":"Welcome to TASKATI",
   "areyousure":"Are you sure you wnat to delete all tasks ?",
   "Yes":"YES",
-  "No":"NO"
+  "No":"NO",
+  "Complete Task":"done",
+  "Delete Task":"Delete",
+  "Edit Task":"Edit",
+  "start working":"start"
 
 
 

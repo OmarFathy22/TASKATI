@@ -47,7 +47,8 @@ const DeleteAlltaskbtn = ({ user }) => {
              <button className="delete-task" style={{marginRight:"20px" , backgroundColor:"teal"}}
               onClick = {(e) => {
               e.preventDefault()
-                deleteAllDocs();
+              setshowform(false)
+              deleteAllDocs();
               }}
              >{t("Yes")}</button>
              <button className="delete-task"

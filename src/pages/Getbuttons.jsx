@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 // @ts-ignore
 import sound from "./audio/success.mp3";
 import { useEffect, useState } from "react";
+import { t } from "i18next";
 function Getbuttons({ user, stringId, path }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ function Getbuttons({ user, stringId, path }) {
         <div></div>
         <div className="icons_parent">
           {!show_timer_box &&
-          <i className="fa-solid fa-stopwatch timer" 
+          <i className="fa-solid fa-play timer" 
           onClick={
            () => {
             setstart(true) 
@@ -62,7 +63,7 @@ function Getbuttons({ user, stringId, path }) {
          ></i>
           
           }
-           <p className="start-timer pos-timer" >start timer</p>
+           <p className="start-timer pos-timer" >{t("start working")}</p>
           {show_timer_box && 
             <p className="timer-box start-timer" >
             {Math.floor(seconds/60/60)%60 < 10 ? "0" + Math.floor(seconds/60/60)%60 : Math.floor(seconds/60/60)%60}:
@@ -74,7 +75,6 @@ function Getbuttons({ user, stringId, path }) {
              setseconds(0)
              setstart(false) 
              setshow_timer_box (false)
-
             }
            }
           ></i></p>
@@ -86,7 +86,7 @@ function Getbuttons({ user, stringId, path }) {
         <div className="task_options">
           <Link to={`edit/${path}`}>
               <i className="fa-solid fa-circle-info info" style={{color:"#888"}}></i>
-              <p className="start-timer pos-info">Edit Task</p>
+              <p className="start-timer pos-info">{t("Edit Task")}</p>
 
           </Link>
 
@@ -96,7 +96,7 @@ function Getbuttons({ user, stringId, path }) {
               deletebtn();
             }}
           ></i>
-            <p className="start-timer pos-trash">Delete Task</p>
+            <p className="start-timer pos-trash">{t("Delete Task")}</p>
 
 
           <i style={{color:"rgb(3, 158, 143)"}}
@@ -104,9 +104,11 @@ function Getbuttons({ user, stringId, path }) {
             onClick={() => {
               play();
               donefunc();
+              setstart(false);
+
             }}
           ></i>
-        <p className="start-timer pos-done">Complete Task</p>
+        <p className="start-timer pos-done">{t("Complete Task")}</p>
         </div>
       </div>
     </div>
