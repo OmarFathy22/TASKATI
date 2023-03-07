@@ -20,6 +20,7 @@
   border: none;
   color: white;
   text-align: center;
+  width: 50vh;
 }
 .one .title:focus
 {
@@ -28,9 +29,8 @@
 .one label
 {
   cursor: pointer;
-  position: absolute;
-  top: -7px;
-  right: 0;
+  margin-bottom: 10px;
+  margin-left: 10px;
   
 }
 .one label:hover
@@ -79,7 +79,6 @@
   background-color: #444;
   padding: 0px 10px;
   margin-bottom: 10px;
-  border: 1px solid white;
 }
  .two .container:hover{
   border-left: 6px solid whitesmoke;
@@ -160,6 +159,4 @@
 {
   color:white;
 }
-.line{text-decoration: line-through wavy red 3.5px ;}
-
 

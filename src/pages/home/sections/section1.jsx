@@ -13,8 +13,9 @@ const input_element = useRef(null);
   if(user && value)
   {
     return (
-      <section className='flex one'>
+      <section className='one'>
       <input 
+      style={{overflow:"auto"}}
       ref={input_element}
        onChange={
         (eo) => {

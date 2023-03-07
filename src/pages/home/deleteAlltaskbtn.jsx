@@ -42,7 +42,7 @@ const DeleteAlltaskbtn = ({ user }) => {
         </button>
          {showform && 
          <Modal closeModal={closeModal} >
-             <h1 style={{fontSize:"18px"}}>{t("areyousure")}</h1>
+             <h1 style={{fontSize:"18px" , color:"#222"}}>{t("areyousure")}</h1>
           <div className="flex">
              <button className="delete-task" style={{marginRight:"20px" , backgroundColor:"teal"}}
               onClick = {(e) => {

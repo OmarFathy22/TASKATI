@@ -8,10 +8,8 @@ import "moment/locale/ar";
 import "moment/locale/fr";
 import { useTranslation } from "react-i18next";
 import Getbuttons from "../Getbuttons";
-import { useState } from "react";
 function GetData({ user, order, getAllTasks, TorF }) {
   const { t } = useTranslation();
-  const [compIcon, changecompIcon] = useState(false);
   const [value, loading, error] = useCollection(
     getAllTasks === true
       ? query(collection(db, user.uid), orderBy("Id", order))
@@ -48,7 +46,7 @@ function GetData({ user, order, getAllTasks, TorF }) {
                 {/* ============================== edit here =================================== */}
                 <div className="data_parent">
                   <div>
-                    <h2> {item.data().title}</h2>
+                    <h2 style={{ textOverflow: "ellipsis", overflow:"hidden", width :"80%" , margin:"10px auto"}}> {item.data().title}</h2>
                     {item.data().completed === true && (
                       <img
                         className="completed-icon"

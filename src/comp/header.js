@@ -138,7 +138,8 @@ const Header = () => {
             {user && (
               <li className="main-list">
                 <NavLink className="main-link" to="/Profile">
-                  {t("account")}
+                  {/* {t("account")} */}
+                  {user.displayName}
                 </NavLink>
               </li>
             )}

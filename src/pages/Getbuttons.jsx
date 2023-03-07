@@ -4,10 +4,33 @@ import Moment from "react-moment";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
 // @ts-ignore
-import sound from "./audio/success.mp3"
+import sound from "./audio/success.mp3";
+import { useEffect, useState } from "react";
 function Getbuttons({ user, stringId, path }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
+  const [seconds, setseconds] = useState(0); 
+  const [start, setstart] = useState(false); 
+  const [show_timer_box, setshow_timer_box] = useState(false); 
+  useEffect(() => {
+    // create a interval and get the id
+     if(start)
+     {
+      const myInterval = setInterval(() => {
+        if(start)
+        {
+          setseconds(seconds + 1)
+        }
+        else{
+          clearInterval(myInterval)
+        }
+      }, 1000);
+      // clear out the interval using the id when unmounting the component
+      return () => clearInterval(myInterval);
+     }
+  
+  }, [seconds , start]);
+  
   const donefunc = async () => {
     await updateDoc(doc(db, user.uid, stringId.toString()), {
       completed: true,
@@ -17,39 +40,74 @@ function Getbuttons({ user, stringId, path }) {
     await deleteDoc(doc(db, user.uid, stringId.toString()));
     navigate("/", { replace: true });
   };
-  function play()
- {
-   const audio = new Audio(sound)
-   audio.play();
- }
+  function play() {
+    const audio = new Audio(sound);
+    audio.play();
+  }
 
   return (
-    <div className="flex parent_options" dir="ltr">
+    <div>
       <Moment locale={i18n.language} fromNow date={stringId} />
-      <div className="task_options">
-        <Link to={`edit/${path}`}>
-          <button className="info">
-            <i className="fa-solid fa-info"></i>
-          </button>
-        </Link>
-        <button
-          className="remove-task"
-          onClick={() => {
-            deletebtn();
-          }}
-        >
-          <i className="fa-solid fa-xmark"></i>
-        </button>
-        <button
-          className="done"
-          onClick={() => {
-            donefunc();
-            play();
-            
-          }}
-        >
-          <i className="fa-solid fa-check"></i>
-        </button>
+      <div className="flex parent_options" dir="ltr">
+        <div></div>
+        <div className="icons_parent">
+          {!show_timer_box &&
+          <i className="fa-solid fa-stopwatch timer" 
+          onClick={
+           () => {
+            setstart(true) 
+            setshow_timer_box (true)
+           }
+          }
+         ></i>
+          
+          }
+           <p className="start-timer pos-timer" >start timer</p>
+          {show_timer_box && 
+            <p className="timer-box start-timer" >
+            {Math.floor(seconds/60/60)%60 < 10 ? "0" + Math.floor(seconds/60/60)%60 : Math.floor(seconds/60/60)%60}:
+            {Math.floor(seconds/60)%60 < 10 ? "0" + Math.floor(seconds/60)%60 : Math.floor(seconds/60)%60}:
+            {seconds % 60 < 10 ? "0" + seconds % 60 : seconds % 60}
+          <i className="fa-solid fa-arrows-rotate repeat"
+          onClick={
+            () => {
+             setseconds(0)
+             setstart(false) 
+             setshow_timer_box (false)
+
+            }
+           }
+          ></i></p>
+          
+          }
+
+        </div>
+      
+        <div className="task_options">
+          <Link to={`edit/${path}`}>
+              <i className="fa-solid fa-circle-info info" style={{color:"#888"}}></i>
+              <p className="start-timer pos-info">Edit Task</p>
+
+          </Link>
+
+          <i style={{color:"rgb(255 40 3 / 79%)"}}
+            className="fa-solid fa-trash-can trash"
+            onClick={() => {
+              deletebtn();
+            }}
+          ></i>
+            <p className="start-timer pos-trash">Delete Task</p>
+
+
+          <i style={{color:"rgb(3, 158, 143)"}}
+            className="fa-solid fa-circle-check check-mark"
+            onClick={() => {
+              play();
+              donefunc();
+            }}
+          ></i>
+        <p className="start-timer pos-done">Complete Task</p>
+        </div>
       </div>
     </div>
   );

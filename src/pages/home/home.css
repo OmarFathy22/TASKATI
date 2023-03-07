@@ -15,11 +15,19 @@
 /* ==============================
 1-  OPIONS (filtered data)
 =================================*/
-.home{justify-content: flex-start;}
+.home {
+  justify-content: flex-start;
+}
+
 .home section {
   margin-bottom: 30px;
 }
-.home .parent-of-btns { margin-top: 30px; position: relative;}
+
+.home .parent-of-btns {
+  margin-top: 30px;
+  position: relative;
+}
+
 .home .parent-of-btns button {
   background-color: #3467c2;
   font-size: 16px;
@@ -43,12 +51,12 @@
   padding: 7px 14px;
   border-radius: 4px;
 }
-.home .parent-of-btns .orderbtn
-{
+
+.home .parent-of-btns .orderbtn {
   opacity: .4;
 }
-.home .parent-of-btns .inActive
-{
+
+.home .parent-of-btns .inActive {
   opacity: 1;
 }
 
@@ -66,9 +74,9 @@
 .home .all-tasks .one-task {
   border-bottom: 1px solid teal;
   border-left: 1px solid teal;
-  --tw-shadow: 0px 1px 3px #0000003d,0px 2px 8px #15c0e229;
-    --tw-shadow-colored: 0px 1px 3px var(--tw-shadow-color),0px 2px 8px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  --tw-shadow: 0px 1px 3px #0000003d, 0px 2px 8px #15c0e229;
+  --tw-shadow-colored: 0px 1px 3px var(--tw-shadow-color), 0px 2px 8px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   margin: 40px 20px;
   min-width: 300px;
   height: 180px;
@@ -78,9 +86,9 @@
 }
 
 
-.home .all-tasks .one-task:hover {
-  scale: 0.97;
-}
+/* .home .all-tasks .one-task:hover {
+  scale: 0.99;
+} */
 
 .home .all-tasks .one-task h2 {
   font-size: 24px;
@@ -98,25 +106,28 @@
   margin: 0 11px;
 }
 
-.home .all-tasks .one-task time  {
-  font-size:10px;
+.home .all-tasks .one-task time {
+  font-size: 10px;
   color: rgb(164, 213, 255);
-  margin-top: 8px;
-
+  /* margin-top: 8px; */
+  position: absolute;
+  top: -40px;
+  left: 10px;
 }
-.home .all-tasks .one-task .data_parent
-{
+
+.home .all-tasks .one-task .data_parent {
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
-  right: 0  ;
+  right: 0;
 }
+
 /* ==============================
 3- Add new task BTN
 =================================*/
 
- .add-task-btn {
+.add-task-btn {
   background-color: teal;
   font-size: 16px;
   padding: 8px 12px;
@@ -124,11 +135,15 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.home-add-task-btn{
+
+.home-add-task-btn {
   width: 300px;
   margin-right: 10px !important;
 }
-.add-task-btn:active{scale: .95;}
+
+.add-task-btn:active {
+  scale: .95;
+}
 
 .home .add-task-btn .fa-plus {
   font-size: 14px;
@@ -140,7 +155,7 @@
 
 }
 
- .Light .home .all-tasks .one-task:hover {
+.Light .home .all-tasks .one-task:hover {
   border-left: 8px solid teal;
 }
 
@@ -160,56 +175,45 @@
   margin-left: 18px;
 }
 
-.send-email
-{
+.send-email {
   margin-top: 20px;
   background-color: teal !important;
 }
-p i.fa-solid .fa-heart
-{
-  color : red !important;
-  cursor:alias;
+
+p i.fa-solid .fa-heart {
+  color: red !important;
+  cursor: alias;
 }
 
- /* task_options */
- 
- .task_options button{
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  width: 30px;
-  cursor: pointer;
-  background-color: rgba(228, 43, 11, 0.792);
-  font-size: 12px !important;
-  font-weight: 700;
-  opacity: 1;
-  margin-left: 10px;
+/* task_options */
 
- }
- .task_options button i{
-  font-size: 15px;
- }
- .task_options button i:hover{
-    font-size: 15px;
- }
 
- .task_options button:hover{
+.task_options i {
+  font-size: 22px;
+}
+
+.task_options i:hover {
+  font-size: 21px;
+}
+
+.task_optionsi:hover {
   opacity: 0.9;
   padding: 6px;
- }
- .task_options button:active{
+}
+
+.task_options i:active {
   scale: .9;
- }
- .task_options .done
- {
-  background-color: teal;
- }
- .task_options .info
- {
-  background-color: gray;
-  margin-left: 10px;
- }
- .parent_options{
+}
+
+.task_options i {
+  margin-left: 15px;
+}
+
+.task_options i {
+  color: whitesmoke;
+}
+
+.parent_options {
   width: 100%;
   justify-content: space-between;
   margin-top: 15px;
@@ -218,9 +222,81 @@ p i.fa-solid .fa-heart
   bottom: 0;
   right: 0;
 
- }
- .completed-icon{
+}
+
+.completed-icon {
   position: absolute;
   top: 0;
   right: 0;
- }
+}
+
+p.start-timer {
+  background-color: #888;
+  color: #222;
+  font-size: 15px;
+  width: 100px;
+  line-height: 30px;
+  border-radius: 8px;
+  position: absolute;
+  display: none;
+
+}
+
+.icons_parent {
+  position: absolute;
+  bottom: -1px;
+  left: 15px;
+}
+
+.timer:hover {
+  font-size: 24px !important;
+}
+
+.icons_parent i {
+  font-size: 25px;
+}
+
+.pos-timer {
+  bottom: -35px;
+  left: -20px;
+}
+.pos-done{
+  bottom: -35px;
+  left: 230px;
+}
+.pos-trash{
+  bottom: -35px;
+  left: 190px;
+}
+.pos-info{
+  bottom: -35px;
+  left: 160px;
+  display: none;
+}
+.info:hover + .pos-info{
+display: block !important;
+}
+.trash:hover + .pos-trash{
+display: block !important;
+}
+.check-mark:hover + .pos-done{
+display: block !important;
+}
+.timer:hover + .pos-timer{
+display: block !important;
+}
+.timer-box{
+  display: block !important;
+  font-size: 25px !important;
+  width: 150px !important;
+  color: #222 !important;
+  bottom: 8px;
+  left: -7px;
+}
+.repeat{
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+i:active{
+  scale: 0.98;
+}
