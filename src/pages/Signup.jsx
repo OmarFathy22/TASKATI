@@ -65,7 +65,7 @@ const Signup = () => {
         <Header />
 
         <main>
-          <form>
+          <form style={{position:"relative"}} dir = "auto">
             <p style={{ fontSize: "23px", marginBottom: "22px" }}>
               Create a new account <span>🧡</span>{" "}
             </p>
@@ -93,6 +93,7 @@ const Signup = () => {
               placeholder=" Password : "
               type="password"
             />
+            <p style={{fontSize:"8px" , position:"absolute" , top:"196px" , left:"5px"}}>Should be least 6 characters</p>
             <button
               onClick={(e) => {
                 e.preventDefault();
