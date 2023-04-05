@@ -28,6 +28,7 @@ function Section2({user , Id , checkboxfunc , trashbtn , showaddtask , setshowad
           <p className='para' > <Moment locale = {i18n.language} fromNow date={value.data().Id} /></p>
         <div className='flex completed'>
             <div className="checkbox"><input
+            maxLength={20}
             onChange={async(eo) => {
               checkboxfunc(eo)
             }}
@@ -55,6 +56,7 @@ function Section2({user , Id , checkboxfunc , trashbtn , showaddtask , setshowad
            <li className="container flex add-more-task">
              <form style={{display:"block"}}>
              <input 
+             maxLength={30}
              onChange={
               (eo) => {
                 eo.preventDefault()

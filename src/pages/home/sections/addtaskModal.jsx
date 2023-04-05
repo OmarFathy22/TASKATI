@@ -8,11 +8,12 @@ function ADDTASK({curr , detailsfunc , addTaskfunc , tasklist , submitfunc , sen
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     settaskplaceholder((i18n.language === "en" ? "Details" :(i18n.language === "ar" ? "التفاصيل" : "détails")));
-   });
+   },[i18n]);
   return (
    <div>
       <div>
         <input
+         maxLength={30}
           className="details"
           type="text"
           placeholder= {taskplaceholder}

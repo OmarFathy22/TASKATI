@@ -20,7 +20,7 @@ const Home = () => {
   const [user, loading, error] = useAuthState(auth);
   const [curr, setcurr] = useState("");
   const [tasklist, settaslist] = useState([]);
-  const [tasksTitle, settasksTitle] = useState("Title");
+  const [tasksTitle, settasksTitle] = useState("");
   const [showform, setshowform] = useState(false);
   const [sending_data, setsendingdata] = useState(false);
   const [showMessage, setshowMessage] = useState(false);
@@ -78,18 +78,12 @@ const Home = () => {
   };
 
   const closeModal = () => {
-    settasksTitle(
-      i18n.language === "en"
-        ? "Title"
-        : i18n.language === "ar"
-        ? "العنوان"
-        : "le titre"
-    );
+    settasksTitle("");
     setshowform(false);
     settaslist([]);
   };
 
-  //////////////////////////////////////////////
+  /////////////////////////////////////////////
 
   /*==========================================
   =             Functions for this page            =
@@ -167,7 +161,7 @@ const Home = () => {
           <Header />
 
           <main>
-            <p dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+            <p dir="auto">
               {t("welcome")}: {user.displayName}{" "}
               <span>
                 <i
@@ -177,7 +171,7 @@ const Home = () => {
               </span>
             </p>
 
-            <p dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+            <p style={{color:"#eb484e"}} dir={"auto"}>
               {t("verifying_message")} ✋{" "}
             </p>
             <button
