@@ -1,7 +1,7 @@
 import { useDocument } from "react-firebase-hooks/firestore";
  import { doc } from "firebase/firestore";
 import Loading from 'pages/loading';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { db } from "../../../firebase/config";
 function Section1({user , Id ,changeTitle }) {
 const [value, loading, error] = useDocument(doc(db, user.uid, Id));
@@ -22,7 +22,7 @@ const input_element = useRef(null);
          changeTitle(eo); 
         }
        }
-      type="text" id = 'edit-title' placeholder="add title" defaultValue={value.data().title} className = {"title " } />
+      type="text" id = 'edit-title' placeholder="add title" defaultValue={value.data().title} className = {"title" } />
       <label
         onClick={
           () => {

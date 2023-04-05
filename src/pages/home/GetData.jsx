@@ -46,7 +46,7 @@ function GetData({ user, order, getAllTasks, TorF }) {
                 {/* ============================== edit here =================================== */}
                 <div className="data_parent">
                   <div>
-                    <h2 style={{ textOverflow: "ellipsis", overflow:"hidden", width :"80%" , margin:"10px auto"}}> {item.data().title}</h2>
+                    <h2 style={{ textOverflow: "ellipsis", overflow:"hidden", width :"80%" , height:"30%" , margin:"10px auto"}}> {item.data().title}</h2>
                     {item.data().completed === true && (
                       <img
                         className="completed-icon"

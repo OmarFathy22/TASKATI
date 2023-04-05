@@ -28,18 +28,20 @@ const Signup = () => {
   useEffect(() => {
     if (user) {
       if (!user.emailVerified) {
-        return navigate("/signup");
+         navigate("/signup");
       } else {
-        return navigate("/");
+         navigate("/");
       }
     }
-  });
-  if (loading) return (
-    <>
-  <Loading />
-    </>
-  )
-  if (error) return(<> <Wrong /></>)
+  } , [user , navigate]);
+  if (loading)
+    return (
+      <>
+        <Loading />
+      </>
+    );
+  if (error) return <Wrong />;
+  if (loading) return <Loading />;
   if (user) {
     if (!user.emailVerified) {
       return (
@@ -52,7 +54,7 @@ const Signup = () => {
         </div>
       );
     } else {
-       navigate("/");
+      navigate("/");
     }
   }
 
@@ -65,7 +67,7 @@ const Signup = () => {
         <Header />
 
         <main>
-          <form style={{position:"relative"}} dir = "auto">
+          <form style={{ position: "relative" }} dir="auto">
             <p style={{ fontSize: "23px", marginBottom: "22px" }}>
               Create a new account <span>🧡</span>{" "}
             </p>
@@ -93,7 +95,16 @@ const Signup = () => {
               placeholder=" Password : "
               type="password"
             />
-            <p style={{fontSize:"8px" , position:"absolute" , top:"196px" , left:"5px"}}>Should be least 6 characters</p>
+            <p
+              style={{
+                fontSize: "8px",
+                position: "absolute",
+                top: "196px",
+                left: "5px",
+              }}
+            >
+              Should be least 6 characters
+            </p>
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -133,13 +144,15 @@ const Signup = () => {
                       .catch((error) => {
                         // An error occurred
                         // ...
+                    console.log(error.message)
+                        return <Wrong />;
                       });
                     const user = userCredential.user;
                     // ...
                   })
                   .catch((error) => {
-                    const errorMessage = error.message;
-                    <h2>{errorMessage}</h2>;
+                    console.log(error.message)
+                    return <Wrong />;
                     // ..
                   });
               }}
